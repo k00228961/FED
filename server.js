@@ -33,8 +33,9 @@ app.post('/', function (req, res) {
         let speed = `Wind speed is ${weather.wind.speed}`;
         let arrow = `${weather.wind.deg}`;
         let direction = `Direction is ${weather.wind.deg}°`;
+        let description = `Weather description: ${weather.weather[0].description}`;
         res.render('index', {weather: weatherText, weatherPres: pressure, weatherHum: humidity, weatherSpeed: speed,
-          weatherDir: direction, compArrow: arrow, icon: getDirection(arrow), error: null});
+          weatherDir: direction, compArrow: arrow, icon: getDirection(arrow), weatherDesc: description, error: null});
       }
     }
   });
@@ -42,8 +43,6 @@ app.post('/', function (req, res) {
 
 function getDirection(arrow){
   console.log('getDirection function working!')
-  var icon = document.createElement("img");
-  icon.src = "/public/img/arrow.png";
   
   if(arrow >= 348.75 && arrow <= 11.25){
       icon = '/public/img/arrow.png';

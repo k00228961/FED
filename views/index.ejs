@@ -21,9 +21,12 @@
         </form>
         <div class="grid-container">
         <% if(weather !== null){ %>
+
+          <div class="desc" id="info0"><p><%= weatherDesc %></p></div>
+
           <div class="temp" id="info1"><p><%= weather %></p></div>
           <div class="pres" id="info2"><p><%= weatherPres %><img class="pIcon" src="/img/presIcon.png"></p></div>
-          <div class="hum" id="info3"><p><%= weatherHum %></p></div>
+          <div class="hum" id="info3"><p><%= weatherHum %><img class="hIcon" src="/img/humidity.png"></p></div>
           <div class="speed" id="info4"><p><%= weatherSpeed %><img class="wIcon" src="/img/windIcon.png"></p></div>
           <div class="dir" id="info5"><p><%= weatherDir %></p></div>
 

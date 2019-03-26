@@ -105,6 +105,11 @@ h1 {
   width: 20%;
 }
 
+.hIcon {
+  height: 20%;
+  width: 20%;
+}
+
 /*COMPASS CSS*/
 .parent {
   position: relative;
@@ -117,16 +122,16 @@ h1 {
   height: 400px;
 }
 
-#info6 {
+/*#info6 {
   display: flex;
   justify-content: center;
-}
+}*/
 
 /*GRID CSS*/
 .grid-container {
   display: grid;
   grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px;
   padding: 10px;
 }
 
@@ -135,6 +140,11 @@ h1 {
 }
 .grid-container > div {
   padding: 20px;
+}
+
+#info0 {
+  grid-row: 4;
+  grid-column: 1/4;
 }
 
 #info1 {
