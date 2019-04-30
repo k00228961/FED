@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping App</title>
+        <link rel="stylesheet" type="text/css" href="css/Womens.css">
+    </head>
+    <body>
+
+        <div id="navbar">
+            <header>
+                <div class="navbar"></div>
+                <h1 class="logo"><a href="./index.html">SUS<span>TAIN</span></a></h1>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <nav>
+                    <ul>
+                        <li><a href="./homepage.html">Products</a>
+                            <ul>
+                                <a href="./mens.html">Mens</a>
+                                <a href="./womens.html">Womens</a>
+                            </ul>
+                        </li>
+                        <li><a href="#">Cart</a></li>
+                        <li><a href="./aboutus.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <label for="nav-toggle" class="nav-toggle-label"><span></span></label>    
+            </header>
+        </div>
+
+        <div id="cart" class="cart">
+                <p><img src="./img/cartimg.png">({{cart}})</p>
+            </div>
+
+        <div id="wapp">
+            <div class="row">
+                <div class="column" v-for="item in wproducts">
+                    <div class="card">
+                        <img :src="item.image" :alt="item.name">
+                        <h1>{{ item.name }}</h1>
+                        <div class="h3">${{ item.price }}</div>
+                        <p>{{ item.description }}</p>
+                        <p><button v-on:click="addToCart">Add to Cart</button></p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        
+
+    </body>
+
+    <footer>
+            <div class="copyright">
+                <p>&copy; 2019 - Sustain - Phuriphat Meehan - K00228961</p>
+            </div>
+            <div class="social">
+                    <a href="./contact.html" class="contact">Contact Us</a>
+                <a href="#" class="fb">f</a>
+                <a href="#" class="tw">t</a>
+                <a href="#" class="insta">i</a>
+            </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/main.js"></script>
+</html>

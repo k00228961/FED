@@ -1,0 +1,357 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #282828;
+    margin: 0px;
+}
+
+:root {
+    --background: #282828;
+ }
+
+ /*Homepage css*/
+.btn-men {
+    padding-top: 560px;
+}
+.btn-men a {
+    text-decoration: none;
+    color: white;
+}
+.btn-women {
+    padding-top: 560px;
+}
+.btn-women a {
+    text-decoration: none;
+    color: white;
+}
+
+.button {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #222;
+    padding: 17px 60px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+  }
+  
+  .button span {
+    position: relative; 
+    z-index: 1;
+  }
+  
+  .button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: red;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  
+  .button:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+
+ /*Product css*/
+ #app {
+     padding-top: 200px;
+ }
+ img {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}
+/*Navbar css*/
+h1 span {
+    color: red;
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    color: white;
+    /*margin: 0 removes space around logo*/
+}
+
+body {
+    padding: 0;
+	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    color: red;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover{
+    color: white;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 180px;
+    border-radius: 4px;
+}
+nav ul li ul a {
+    padding: 0px 25px;
+}
+@media screen and (min-width: 750px){
+.nav-toggle-label{
+    display: none;
+}
+    
+header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 4fr) 1fr;
+}
+    
+.logo {
+    grid-column: 2 / span 1;
+}
+
+nav {
+    all: unset;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+    
+nav a {
+    opacity: 1;
+    position: relative;
+}
+    
+nav li {
+    padding: 1em;
+}
+    
+nav ul {
+    display: flex;
+}
+    
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: red;
+    position: absolute;
+    top: -.45em;
+    left: 0;
+    right: 0;
+    transform: scale(0,1);
+    transition: transform ease-in-out 250ms;
+        
+}
+    
+nav a:hover::before {
+    transform: scale(1,1);
+    }   
+}
+
+/*div men/women css*/
+.wrapper {
+    padding-top: 80px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+.left-column {
+    background-image: url(../img/leftimage.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 1349px;
+}
+.right-column {
+    background-image: url(../img/rightimage.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 1349px;
+}
+
+/*footer css*/
+footer {
+    width: 100%;
+    display: inline-block;
+    height: 70px;
+    margin: 2em 0;
+    background-color: #282828;
+}
+.copyright {
+    width: 50%;
+    float: left;
+}
+footer p {
+    text-align: center;
+    padding-left: 10%;
+    color: white;
+    font-size: 0.8em;
+    line-height: 75px;
+    letter-spacing: 1px;
+}
+
+.social {
+    width: 50%;
+    float: right;
+}
+.social a {
+    float: left;
+    line-height: 75px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact{
+    width: 25%;
+    background-color: #ff4e57;
+}
+
+.fb {
+    width: 10%;
+    background-color: #0479ff;
+}
+
+.tw {
+    width: 10%;
+    background-color: #04d9ff;
+}
+
+.insta {
+    width: 10%;
+    background-color: #ed28ff;
+}
